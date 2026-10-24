@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: smart-saathi-ai
+    name: smart-saathi-server
     runtime: node
     plan: free
     buildCommand: npm install
@@ -11,3 +11,5 @@ services:
         sync: false
       - key: OPENAI_MODEL
         value: gpt-4.1-mini
+      - key: ALLOWED_ORIGIN
+        value: "*"

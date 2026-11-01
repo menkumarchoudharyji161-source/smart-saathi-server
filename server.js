@@ -2,7 +2,7 @@
 const http = require('http');
 const { URL } = require('url');
 const PORT = Number(process.env.PORT || 10000);
-const API_KEY = process.env.OPENAI_API_KEY || '';
+const API_KEY = String(process.env.OPENAI_API_KEY || '').replace(/\s+/g, '').replace(/^['"]|['"]$/g, '');
 const MODEL = process.env.OPENAI_MODEL || 'gpt-4.1-mini';
 const ORIGIN = process.env.ALLOWED_ORIGIN || '*';
 const MAX_BODY = 12 * 1024 * 1024;

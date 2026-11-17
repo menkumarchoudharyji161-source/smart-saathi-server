@@ -10,8 +10,7 @@ const CHAT_MODEL =
   process.env.GROQ_MODEL || 'openai/gpt-oss-20b';
 
 const VISION_MODEL =
-  process.env.GROQ_VISION_MODEL ||
-  'meta-llama/llama-4-scout-17b-16e-instruct';
+  process.env.GROQ_VISION_MODEL || 'qwen/qwen3.8-27b';
 
 const MAX_BODY = 12 * 1024 * 1024;
 

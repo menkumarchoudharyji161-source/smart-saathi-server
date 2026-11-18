@@ -1,9 +1,15 @@
+
 {
   "name": "smart-saathi-api",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "private": true,
-  "description": "Smart Saathi AI chat, image analysis and web search API",
+  "description": "Smart Saathi API: Groq primary, Gemini fallback; no paid OpenAI fallback",
   "main": "server.js",
-  "scripts": { "start": "node server.js", "test": "node smoke-test.js" },
-  "engines": { "node": ">=20" }
+  "scripts": {
+    "start": "node server.js",
+    "test": "node tests/server-smoke.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
 }

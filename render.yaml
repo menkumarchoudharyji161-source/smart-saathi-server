@@ -1,3 +1,4 @@
+
 services:
   - type: web
     name: smart-saathi-server
@@ -7,9 +8,13 @@ services:
     startCommand: npm start
     healthCheckPath: /api/health
     envVars:
-      - key: OPENAI_API_KEY
+      - key: GROQ_API_KEY
         sync: false
-      - key: OPENAI_MODEL
-        value: gpt-4.1-mini
-      - key: ALLOWED_ORIGIN
-        value: "*"
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GROQ_MODEL
+        value: openai/gpt-oss-20b
+      - key: GROQ_VISION_MODEL
+        value: qwen/qwen3.8-27b
+      - key: GEMINI_MODEL
+        value: gemini-3.8-flash
